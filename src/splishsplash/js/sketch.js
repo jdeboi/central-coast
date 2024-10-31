@@ -80,6 +80,7 @@ function setup() {
   engine = Engine.create();
   world = engine.world;
 
+  // test2
   // for (let i = 0; i < 6; i++) {
   //   const isFlipped = i % 2 == 0;
   //   const x = width / 2 + (isFlipped ? -120 : 120);
