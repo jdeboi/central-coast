@@ -1,0 +1,34 @@
+# Node modules
+node_modules/
+
+# Output of Vite builds
+dist/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Local environment settings
+.env
+.env.local
+.env.*.local
+
+# Mac system files
+.DS_Store
+
+# IDE and editor settings
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Optional: include lock files if you want to prevent version conflicts
+# Uncomment one of the following lines if desired
+# yarn.lock
+# package-lock.json
+# pnpm-lock.yaml
