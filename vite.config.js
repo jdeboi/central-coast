@@ -8,13 +8,13 @@ export default defineConfig({
       input: {
         main: "./src/weeds/index.html",
         agave: "./src/agave/index.html",
-        sheen: "./src/agave/index.html",
+        sheen: "./src/sheen/index.html",
         splishsplash: "./src/splishsplash/index.html",
       },
     },
     outDir: "../dist", // Output directory for the build
   },
   server: {
-    open: "/central-coast/weeds/", // Open weeds page by default
+    open: "/central-coast/splishsplash/", 
   },
 });
