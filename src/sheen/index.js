@@ -36,8 +36,8 @@ function init() {
 
   const skySize = 1000;
   let skyGeom = new THREE.BoxGeometry(skySize, skySize, skySize);
-  let radiance = loadCubeMap("assets/skybox/radiance");
-  let irradiance = loadCubeMap("assets/skybox/irradiance");
+  let radiance = loadCubeMap("/central-coast/assets/sheen/skybox/radiance");
+  let irradiance = loadCubeMap("/central-coast/assets/sheen/skybox/irradiance");
   let skyboxMaterial = new SkyMaterial(radiance);
   let skyBox = new THREE.Mesh(skyGeom, skyboxMaterial);
   // scene.add(skyBox);
