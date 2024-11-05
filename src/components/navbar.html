@@ -1,0 +1,71 @@
+<nav id="coastal-navbar" class="navbar">
+  <div class="container-fluid">
+    <div class="nav-item dropdown">
+      <a
+        class="nav-link dropdown-toggle"
+        href="/central-coast/"
+        role="button"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+      >
+        Central Coast
+      </a>
+      <ul class="dropdown-menu" id="nav-links"></ul>
+    </div>
+  </div>
+</nav>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const pages = [
+      { id: "weeds", name: "Weeds" },
+      { id: "agave", name: "Agave" },
+      { id: "splishsplash", name: "SplishSplash" },
+      { id: "sheen", name: "Sheen" },
+    ];
+
+    const currentPage = "home"; // You can set this dynamically based on your routing logic
+
+    const navLinks = document.getElementById("nav-links");
+
+    pages.forEach((page) => {
+      const li = document.createElement("li");
+      //li.classList.add("nav-item");
+      li.classList.add("dropdown-item");
+      const a = document.createElement("a");
+      a.classList.add("nav-link");
+      if (currentPage === page.id) {
+        a.classList.add("active");
+        a.setAttribute("aria-current", "page");
+      }
+      a.href = `/central-coast/${page.id}/`;
+      a.textContent = page.name;
+
+      li.appendChild(a);
+      navLinks.appendChild(li);
+    });
+  });
+</script>
+
+<style>
+  #coastal-navbar {
+    background-color: #000000;
+    color: white;
+    font-size: 12px;
+    font-family: consoleFont, "Roboto", sans-serif;
+  }
+
+  #coastal-navbar .dropdown-item {
+    font-size: 11px;
+  }
+
+  @font-face {
+    font-family: consoleFont;
+    src: url(https://lmd-bucket.s3.us-east-2.amazonaws.com/shared/fonts/dogica.ttf);
+  }
+
+  @font-face {
+    font-family: consoleFontBold;
+    src: url(https://lmd-bucket.s3.us-east-2.amazonaws.com/shared/fonts/dogicabold.ttf);
+  }
+</style>

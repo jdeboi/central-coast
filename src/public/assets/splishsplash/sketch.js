@@ -80,15 +80,7 @@ function setup() {
   engine = Engine.create();
   world = engine.world;
 
-  // test2
-  // for (let i = 0; i < 6; i++) {
-  //   const isFlipped = i % 2 == 0;
-  //   const x = width / 2 + (isFlipped ? -120 : 120);
-  //   const y = 150 + i * 150;
-  //   const w = dolphin.width * 0.5;
-  //   const h = dolphin.height * 0.5;
-  //   catapults.push(new Catapult(x, y, w, h, isFlipped));
-  // }
+
 
   for (let y = 0; y < 3; y++) {
     for (let x = 0; x < y + 1; x++) {
@@ -113,6 +105,12 @@ function setup() {
 
 function mouseDragged() {
   circles.push(new Circle(mouseX, mouseY, 6));
+}
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+  ballGraphics.resizeCanvas(windowWidth, windowHeight);
+  shaderGraphics.resizeCanvas(windowWidth/5, windowHeight/5); 
 }
 
 function draw() {

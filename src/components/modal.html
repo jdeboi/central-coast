@@ -1,0 +1,203 @@
+<div id="modal" class="modal fade show" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-window">
+      <!-- titlebar -->
+      <div class="titlebar handle">
+        <div class="buttons">
+          <div id="close-btn" class="circleButton">
+            <div class="closebutton"><div class="innerC"></div></div>
+          </div>
+          <div class="minimize circleButton" id="minimize-btn">
+            <div class="minimizebutton"><div class="innerC"></div></div>
+          </div>
+          <div class="zoom circleButton">
+            <div class="zoombutton"><div class="innerC"></div></div>
+          </div>
+        </div>
+        <div class="titleTxtContainer"></div>
+      </div>
+
+      <!-- content -->
+      <div class="content p-3">
+        <div class="label-content p-3 mb-2">
+          <div class="wall-title mb-3">{=$title}</div>
+          <div>Jenna deBoisblanc</div>
+          <div>Custom Software</div>
+          <div>Dimensions variable</div>
+          <div>{=$createdYear}</div>
+        </div>
+        <button id="close-btn2" class="btn btn-dark">ok</button>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const modalElement = document.getElementById("modal");
+    const closeBtn = document.getElementById("close-btn");
+    const closeBtn2 = document.getElementById("close-btn2");
+
+    // Show modal on page load
+    modalElement.classList.add("show");
+    modalElement.style.display = "block";
+
+    // Close the modal when the close button is clicked
+    closeBtn.addEventListener("click", function () {
+      modalElement.classList.remove("show");
+      modalElement.style.display = "none";
+    });
+
+     // Close the modal when the close button is clicked
+     closeBtn2.addEventListener("click", function () {
+      modalElement.classList.remove("show");
+      modalElement.style.display = "none";
+    });
+  });
+</script>
+<style>
+  /**
+ * 98.css
+ * Copyright (c) 2020 Jordan Scales <thatjdanisso.cool>
+ * https://github.com/jdan/98.css/blob/main/LICENSE
+ */
+  /* Borders */
+  /* Window borders flip button-face and button-highlight */
+  /* Field borders (checkbox, input, etc) flip window-frame and button-shadow */
+  #modal {
+    color: #000;
+    font-family: consoleFont, HelveticaNeue, "Helvetica Neue", "Lucida Grande",
+      Arial, sans-serif;
+    position: absolute;
+    /* margin-bottom: -33px; */
+    font-size: 12px;
+    pointer-events: none;
+  }
+
+  #modal span {
+    line-height: 8px;
+    vertical-align: 50%;
+  }
+  #modal .modal-window {
+    border-radius: 8px;
+    box-shadow: 0px 0px 20px #000000; /* #6c6c6c; */
+    padding-bottom: 2px;
+    overflow: hidden;
+    min-height: 200px;
+    min-width: 320px;
+    background-color: #fff;
+    margin: auto;
+  }
+
+  #modal .titlebar {
+    position: relative;
+    height: 26px;
+    pointer-events: all;
+    font-family: consoleFont, sans-serif;
+    font-size: 0.8em;
+    line-height: 20px;
+    text-align: center;
+    width: 100%;
+    color: white;
+    background: black;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+  #modal .titleTxtContainer {
+    position: relative;
+    height: 26px;
+    white-space: nowrap;
+    flex-grow: 1;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column; /* <--- I added this */
+    align-items: center; /* <--- Change here */
+    width: 100%;
+  }
+  #modal .buttons {
+    padding-left: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: left;
+    white-space: nowrap;
+    line-height: 0px;
+    /* made them match titlebar to show up on Stair */
+    font-family: HelveticaNeue, "Helvetica Neue", "Lucida Grande", Arial,
+      sans-serif;
+    height: 26px;
+    width: 70px;
+    flex-shrink: 0;
+  }
+
+  #modal .circleButton {
+    /* border: .15em solid black; */
+    border-radius: 50%;
+    background: white;
+    color: white;
+    font-size: 8pt;
+    line-height: 10px;
+    margin-right: 8px;
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    /* doing this to position inner circle absolute relative to inner */
+    position: relative;
+  }
+  #modal .circleButton:hover {
+    background: white;
+  }
+  #modal .circleButton .innerC {
+    position: absolute;
+    background: black;
+    border-radius: 50%;
+    height: 8px;
+    width: 8px;
+    /*
+  Put top edge and left edge in the center
+  */
+    top: 50%;
+    left: 50%;
+    margin: -4px 0px 0px -4px;
+    /*
+  Offset the position correctly with
+  minus half of the width and minus half of the height
+  */
+  }
+  #modal .circleButton .innerC:hover {
+    background: white;
+  }
+  #modal .content {
+    font-size: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    pointer-events: all;
+  }
+  #modal .label-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #modal .wall-title {
+    font-size: 16px;
+    font-family: consoleFontBold;
+  }
+
+  #modal .btn {
+    font-size: 12px;
+    padding: 5px 20px;
+  }
+</style>

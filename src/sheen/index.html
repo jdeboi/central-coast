@@ -4,25 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Central Coast - Sheen</title>
-
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <div
-      id="p5-sketch"
-      style="
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: -1;
-      "
-    ></div>
+    <load src="/components/navbar.html" title="splishsplash" />
+    <load src="/components/modal.html" title="Sheen" createdYear="2024" />
+    <div id="p5-sketch"></div>
     <div id="container"></div>
     <!-- <div style="position: absolute; left: 50%; top: 50%; z-index: 2">
       <img src="assets/piwaves.webp" width="200px" height="200px" />
     </div> -->
     <script type="module" src="./index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
