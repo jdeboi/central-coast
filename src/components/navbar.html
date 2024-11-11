@@ -1,5 +1,5 @@
 <nav id="coastal-navbar" class="navbar">
-  <div class="container-fluid">
+  <div class="container-fluid d-flex justify-content-between">
     <div class="nav-item dropdown">
       <a
         class="nav-link dropdown-toggle"
@@ -12,6 +12,33 @@
       </a>
       <ul class="dropdown-menu" id="nav-links"></ul>
     </div>
+
+    <!-- Hamburger Icon with About and Instagram Links -->
+    <div class="nav-item dropdown ms-auto">
+      <a
+        class="nav-link"
+        href="#"
+        role="button"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+      >
+        <i class="bi bi-list" style="font-size: 1.5rem"></i>
+        <!-- Bootstrap Hamburger Icon -->
+      </a>
+      <ul class="dropdown-menu dropdown-menu-end">
+        <li><a class="dropdown-item" href="/central-coast/about/">About</a></li>
+        <li>
+          <a
+            class="dropdown-item"
+            href="https://instagram.com/jdeboi"
+            target="_blank"
+          >
+            <i class="bi bi-instagram" style="font-size: 1.2rem"></i>
+            <!-- Instagram Icon -->
+          </a>
+        </li>
+      </ul>
+    </div>
   </div>
 </nav>
 
@@ -22,6 +49,7 @@
       { id: "agave", name: "Agave" },
       { id: "splishsplash", name: "SplishSplash" },
       { id: "sheen", name: "Sheen" },
+      { id: "starrynight", name: "Starry Night" },
     ];
 
     const currentPage = "home"; // You can set this dynamically based on your routing logic
@@ -30,7 +58,6 @@
 
     pages.forEach((page) => {
       const li = document.createElement("li");
-      //li.classList.add("nav-item");
       li.classList.add("dropdown-item");
       const a = document.createElement("a");
       a.classList.add("nav-link");
